@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav>
+    <a href="/" style="border: 2px solid rgb(222, 208, 208);border-radius: 2px;padding: 10px 20px;background-color: rgb(169, 209, 169);">Home</a>
+    <a href="/contact" style="border: 2px solid rgb(222, 208, 208);border-radius: 2px;padding: 10px 20px;background-color: rgb(169, 209, 169);"> Contact</a>
+    <a href="/about" style="border: 2px solid rgb(222, 208, 208);border-radius: 2px;padding: 10px 20px;background-color: rgb(169, 209, 169);">about</a>
+    <a href="/experience" style="border: 2px solid rgb(222, 208, 208);border-radius: 2px;padding: 10px 20px;background-color: rgb(169, 209, 169);">experience</a>
+  </nav>
+
+    <h1 style="justify-content: center; color: rgb(36, 137, 176);align-items: center;text-align: center;">Welcome to My Portfolio</h1>
+    <p>I am a passionate developer. Check out my projects and feel free to contact me. </p>
+     <section>
+    <h1>I am Jeshitha Edupalli</h1>
+    <p>I am a passionate front-end developer with a strong focus on creating responsive, user-friendly websites using HTML, CSS, and modern web design techniques. I enjoy bringing ideas to life in the browser and constantly learning new tools in the front-end ecosystem.</p>
+
+    <div class="button-group">
+    <a href="/experience" class="btn btn-skill">See My Skills</a>
+    <a href="{{ url_for('static', filename='resume.pdf') }}" class="btn btn-resume" target="_blank">View My Resume</a>
+  </div>
+  </section>
+  <section>
+    <h1>About My Portfolio</h1>
+    <p>Hello! I am a passionate developer skilled in full stack development. I enjoy building web applications and solving real-world problems with code. This portfolio showcases my work and projects.</p>
+  </section>
+  <section>
+    <h1>My Skills & Projects</h1>
+    <ul>
+      <li><strong>Data Structures & Algorithms (DSA)</strong> -
+        <a href="https://github.com/yourusername/dsa-project" target="_blank">View Project</a>
+      </li>
+      <li><strong>Frontend Development (HTML, CSS)</strong> -
+        <a href="https://github.com/yourusername/frontend-project" target="_blank">View Project</a>
+      </li>
+      <li><strong>Python Full Stack Development</strong> -
+        <a href="https://github.com/yourusername/fullstack-python-project" target="_blank">View Project</a>
+      </li>
+    </ul>
+  </section>
+</body>
+</html>

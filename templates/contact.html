@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <nav>
+    <a href="/" style="border: 2px solid rgb(222, 208, 208);border-radius: 2px;padding: 10px 20px;background-color: rgb(169, 209, 169);">Home</a>
+    <a href="/contact" style="border: 2px solid rgb(222, 208, 208);border-radius: 2px;padding: 10px 20px;background-color: rgb(169, 209, 169);">Contact</a>
+    <a href="/about" style="border: 2px solid rgb(222, 208, 208);border-radius: 2px;padding: 10px 20px;background-color: rgb(169, 209, 169);">About</a>
+    <a href="/experience" style="border: 2px solid rgb(222, 208, 208);border-radius: 2px;padding: 10px 20px;background-color: rgb(169, 209, 169);">Experience</a>
+  </nav>
+    <h2>Contact Me</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flashes">
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <textarea name="message" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
